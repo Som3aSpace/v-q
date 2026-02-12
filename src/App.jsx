@@ -156,8 +156,10 @@ export default function App() {
     };
   }, []);
 
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
-    <div className="app">
+    <div className="app" data-base={baseUrl}>
       {!showMap && (
         <div className="question-shell">
           {showQuestion && (

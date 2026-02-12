@@ -15,6 +15,7 @@ const MAP = [
   "#..W.......#",
   "############",
 ];
+const MAP_SIZE = { rows: MAP.length, cols: MAP[0].length };
 
 // Route follows the green path (==== and corridors)
 const ROUTE = [
@@ -70,8 +71,8 @@ export default function TreasureGame({ title = "Find your Valentine gift 🎁" }
       <div
         className="treasure__map"
         style={{
-          width: MAP[0].length * CELL,
-          height: MAP.length * CELL,
+          width: MAP_SIZE.cols * CELL,
+          height: MAP_SIZE.rows * CELL,
         }}
       >
         {MAP.map((row, r) =>
